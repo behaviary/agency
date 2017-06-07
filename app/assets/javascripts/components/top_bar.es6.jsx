@@ -8,7 +8,7 @@ class TopBar extends React.Component {
           </ul>
         </div>
         <div className="top-bar-right">
-          {this.props.menu}
+          <Menu items={this.props.items} />
         </div>
       </div>
     );
@@ -16,5 +16,6 @@ class TopBar extends React.Component {
 }
 
 TopBar.propTypes = {
-  menu: React.PropTypes.node
+  items: React.PropTypes.array
 };
+
