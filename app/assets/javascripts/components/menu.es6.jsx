@@ -3,10 +3,14 @@ class Menu extends React.Component {
   render () {
     const items = this.props.items;
 
+    const hideWithClearFix = {
+        visibility: "hidden"
+    }
+
     const listItems = items.map((item) =>
         <li key={item.id} className="item">
             <a href={item.link}>
-                <span className="label">{item.name}</span>
+                {item.name}
             </a>
         </li>
     );
@@ -14,13 +18,15 @@ class Menu extends React.Component {
     return (
         <ul className="menu">
             {listItems}
-            // <li className="item" onClick={this.props.toggleMenu}>
-            //     <span className=""><i className="fa fa-times"></i></span>
-            // </li>
+            <li style={hideWithClearFix}><span>BigSpacer</span></li>
         </ul>
     );
   }
 }
+
+// <li className="item" onClick={this.props.toggleMenu}>
+//     <span className=""><i className="fa fa-times"></i></span>
+// </li>
 
 Menu.propTypes = {
   items: React.PropTypes.array,

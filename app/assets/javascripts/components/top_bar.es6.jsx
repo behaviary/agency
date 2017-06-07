@@ -1,5 +1,10 @@
 class TopBar extends React.Component {
   render () {
+    const spacer = [{
+          id: "",
+          link: "",
+          name: ""
+        }]
     return (
       <div className="top-bar">
         <div className="top-bar-left">
@@ -8,7 +13,8 @@ class TopBar extends React.Component {
           </ul>
         </div>
         <div className="top-bar-right">
-          <Menu items={this.props.items} />
+          <Menu className="left" items={this.props.items} />
+          <FloatButton/>
         </div>
       </div>
     );
