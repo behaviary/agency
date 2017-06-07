@@ -1,4 +1,12 @@
 <div class="team">
     <%= react_component 'TopBar' %>
-    <h1> Team </h1>
+    <h1> Team</h1>
+    <div class="row">
+      <%= react_component('TeamMember',
+        {
+          member_name: "Tyler Smith",
+          member_photo: image_url('tyler.png'),
+          member_text: "asas"
+        }) %>
+    </div>
 </div>
